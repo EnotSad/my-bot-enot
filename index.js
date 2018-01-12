@@ -6,7 +6,8 @@ var bot = new TelegramBot (TOKEN, {polling: true});
 
 bot.on ('message', function(msg) {
     var id = msg.from.id;
-    bot.sendMessage(msg.chat.id, 'Привет, как тебя зовут')
+    if msg.text == "Привет":
+        bot.sendMessage(msg.chat.id, 'Привет, как тебя зовут')
 })
 
 
