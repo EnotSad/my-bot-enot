@@ -8,8 +8,7 @@ const TOKEN = '507418737:AAHmDGQ5U_0oV-vnsre_Q84JjTSww8xyEwk'
 const bot = new TelegramBot (TOKEN, {polling: true})
 
 bot.on ('message', msg => {
-    if message.text == "Привет":
-        bot.sendMessage(msg.chat.id, 'Привет, как тебя зовут')
+    bot.sendMessage(msg.chat.id, 'Привет, как тебя зовут')
 })
 
 
