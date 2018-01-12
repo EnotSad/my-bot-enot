@@ -4,7 +4,7 @@ var TelegramBot = require('node-telegram-bot-api')
 
 var bot = new TelegramBot (TOKEN, {polling: true});
 
-bot.on ('Привет', function(msg) {
+bot.on ('message', function(msg) {
     var id = msg.from.id;
     var priem = msg.text
     if priem in 'Привет':
