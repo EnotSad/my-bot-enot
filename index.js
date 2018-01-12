@@ -6,9 +6,7 @@ var bot = new TelegramBot (TOKEN, {polling: true});
 
 bot.on ('message', function(msg) {
     var id = msg.from.id;
-    var priem = msg.text
-    if priem in 'Привет':
-        bot.sendMessage(msg.chat.id, 'Привет, как тебя зовут')
+    bot.sendMessage(msg.chat.id, 'Привет, как тебя зовут')
 })
 
 
