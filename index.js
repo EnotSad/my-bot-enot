@@ -22,7 +22,8 @@ bot.onText (/Юнкевич/, msg => {
     bot.sendMessage(msg.chat.id, 'Недозамок')})
 bot.onText (/Какое сейчас время\?/, msg => {
     var id = msg.from.id;
-    bot.sendSticker(msg.chat.id, 'BQADAgADeAcAAlOx9wOjY2jpAAHq9DUC' )
+    var stiker = 'BQADAgADeAcAAlOx9wOjY2jpAAHq9DUC';
+    bot.sendSticker(msg.chat.id, stiker )})
 bot.onText (/Батька/, msg => {
     var id = msg.from.id;
     bot.sendMessage(msg.chat.id, 'CAADAgADDgADkWgMAAF4a15udbXbSwI')})
