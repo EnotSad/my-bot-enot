@@ -36,30 +36,30 @@ var questions = [
   {
     title:'Сколько Моня может выпить колы ?',
     buttons: [
-        [{ text: 'Ровно столько, сколько ты можешь прятаться от комбата.', callback_data: '0_1' }],
-        [{ text: 'Не больше, чем сказал ему врач.   ', callback_data: '0_2' }],
-        [{ text: 'Сколько влезает в бочку.', callback_data: '0_3' }],
-        [{ text: 'Бесконечно -_-.', callback_data: '0_4' }]
+        [{ text: 'Ровно столько, сколько ты можешь прятаться от комбата.' }],
+        [{ text: 'Не больше, чем сказал ему врач.   ' }],
+        [{ text: 'Сколько влезает в бочку.' }],
+        [{ text: 'Бесконечно -_-.'}]
       ],
     right_answer: 4
   },
   {
     title:'Сколько раз за день Буря может показать что он пиздатый',
     buttons: [
-        [{ text: '5', callback_data: '1_1' }],
-        [{ text: 'OVER9999', callback_data: '1_2' }],
-        [{ text: '16', callback_data: '1_3' }],
-        [{ text: '0', callback_data: '1_4' }]
+        [{ text: '5' }],
+        [{ text: 'OVER9999'}],
+        [{ text: '16' }],
+        [{ text: '0'}]
       ],
     right_answer: 2
   },
   {
     title:'Cколько лет Сяве',
     buttons: [
-        [{ text: '15', callback_data: '2_1' }],
-        [{ text: '<50', callback_data: '2_2' }],
-        [{ text: '>50', callback_data: '2_3' }],
-        [{ text: '19', callback_data: '2_4' }]
+        [{ text: '15' }],
+        [{ text: '<50' }],
+        [{ text: '>50' }],
+        [{ text: '19' }]
       ],
     right_answer: 3
   },
@@ -96,8 +96,6 @@ bot.on('callback_query', function (msg) {
   } else {
     bot.sendMessage(msg.from.id, 'Ответ неверный ❌');
   }
-
-  bot.answerCallbackQuery(msg.id, 'Вы выбрали: '+ msg.data, true);
   newQuestion(msg);
 });
 
