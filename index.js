@@ -8,9 +8,8 @@ var chel = bot.onText
 
 
 if chel in (Привет):
-    bot.onText ('Привет', msg => {
-        var id = msg.from.id;
-        bot.sendMessage(msg.chat.id, 'Привет, как тебя зовут')
+    var id = msg.from.id;
+    bot.sendMessage(msg.chat.id, 'Привет, как тебя зовут')
 })
 
 
