@@ -33,9 +33,5 @@ bot.onText (/Гейб/, msg => {
     bot.sendMessage(msg.chat.id, 'CAADAgADIAAD4KV4BXGhwOaE5M7QAg')})
 
 
-})
-
-
-
 
 
