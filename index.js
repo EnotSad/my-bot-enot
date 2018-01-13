@@ -5,11 +5,9 @@ var TelegramBot = require('node-telegram-bot-api')
 var bot = new TelegramBot (TOKEN, {polling: true});
 
 
-bot.on('message', function (msg) {
+bot.onText (/Привет/, msg =>)
     var id = msg.from.id;
-    console.log(msg)
-    if(msg.text == 'Привет'){
-        bot.sendMessage(msg.chat.id, 'Привет, как тебя зовут')})
+    bot.sendMessage(msg.chat.id, 'Привет, как тебя зовут')})
 bot.onText (/БГУИР/, msg => {
     var id = msg.from.id;
     bot.sendMessage(msg.chat.id, 'У БГУИРа одна потеха, сосать х.. у Политеха')})
