@@ -6,7 +6,7 @@ var bot = new TelegramBot (TOKEN, {polling: true});
 
 
 
-bot.onText (/'\/start','привет','старт','Старт','как дела?','как дела?','Привет'/, msg => {
+bot.onText (/"\/start","привет","старт","Старт","как дела?","как дела?","Привет"/, msg => {
     var id = msg.from.id;
     bot.sendMessage(msg.chat.id, 'Привет, как тебя зовут')})
 bot.onText (/БГУИР/, msg => {
