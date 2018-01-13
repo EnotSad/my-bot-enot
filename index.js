@@ -31,7 +31,7 @@ bot.onText (/Гейб/, msg => {
     bot.sendMessage(msg.chat.id, 'CAADAgADIAAD4KV4BXGhwOaE5M7QAg')})
 
 
-bot.onText(//напомни (.+) в (.+)/, function (msg, match) {
+bot.onText(/\/напомни (.+) в (.+)/, function (msg, match) {
     var userId = msg.from.id;
     var text = match[1];
     var time = match[2];
