@@ -38,7 +38,7 @@ bot.onText(/Напомни (.+) в (.+)/, function (msg, match) {
     notes.push( { 'uid':userId, 'time':time, 'text':text } );
 
     bot.sendMessage(userId, 'Отлично! Я обязательно напомню, если не сдохну :)');
-});
+})
 
 setInterval(function(){
     for (var i = 0; i < notes.length; i++){
@@ -48,7 +48,7 @@ setInterval(function(){
                 notes.splice(i,1);
             }
         }
-},1000);
+},1000)
 
 
 
