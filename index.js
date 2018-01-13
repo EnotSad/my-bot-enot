@@ -4,7 +4,12 @@ var TelegramBot = require('node-telegram-bot-api')
 
 var bot = new TelegramBot (TOKEN, {polling: true});
 
-
+var chelovek = msg.text;
+if chelovek == 'Лох' {
+    bot.sendMessage(msg.chat.id, 'Чего ругаешься?');
+};
+    
+    
 bot.onText (/Привет/, msg =>{
     var id = msg.from.id;
     bot.sendMessage(msg.chat.id, 'Привет, как тебя зовут')})
@@ -25,10 +30,10 @@ bot.onText (/Какое сейчас время?/, msg => {
     bot.sendSticker(msg.chat.id, 'BQADAgADeAcAAlOx9wOjY2jpAAHq9DUC')})
 bot.onText (/Батька/, msg => {
     var id = msg.from.id;
-    bot.sendMessage(msg.chat.id, 'CAADAgADDgADkWgMAAF4a15udbXbSwI')})
+    bot.sendSticker(msg.chat.id, 'CAADAgADDgADkWgMAAF4a15udbXbSwI')})
 bot.onText (/Гейб/, msg => {
     var id = msg.from.id;
-    bot.sendMessage(msg.chat.id, 'CAADAgADIAAD4KV4BXGhwOaE5M7QAg')})
+    bot.sendSticker(msg.chat.id, 'CAADAgADIAAD4KV4BXGhwOaE5M7QAg')})
 
 
 
