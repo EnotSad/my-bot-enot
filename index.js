@@ -20,9 +20,9 @@ bot.onText (/Смол/, msg => {
 bot.onText (/Юнкевич/, msg => {
     var id = msg.from.id;
     bot.sendMessage(msg.chat.id, 'Недозамок')})
-bot.onText (/Какое сейчас время\?/, msg => {
+bot.onText (/Какое сейчас время?/, msg => {
     var id = msg.from.id;
-    bot.sendSticker(msg.chat.id, ('BQADAgADeAcAAlOx9wOjY2jpAAHq9DUC'))})
+    bot.sendSticker(msg.chat.id, 'BQADAgADeAcAAlOx9wOjY2jpAAHq9DUC')})
 bot.onText (/Батька/, msg => {
     var id = msg.from.id;
     bot.sendMessage(msg.chat.id, 'CAADAgADDgADkWgMAAF4a15udbXbSwI')})
