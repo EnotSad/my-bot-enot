@@ -4,10 +4,11 @@ var TelegramBot = require('node-telegram-bot-api')
 
 var bot = new TelegramBot (TOKEN, {polling: true});
 
-var chelovek = msg.text;
-if chelovek == 'Лох' {
-    bot.sendMessage(msg.chat.id, 'Чего ругаешься?');
-};
+bot.on ('message', msg =>{
+    var chelovek = msg.text;
+    if chelovek == 'Лох' {
+      bot.sendMessage(msg.chat.id, 'Чего ругаешься?')
+    }})
     
     
 bot.onText (/Привет/, msg =>{
