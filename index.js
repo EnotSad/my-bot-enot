@@ -34,32 +34,32 @@ bot.onText (/Гейб/, msg => {
 
 var questions = [
   {
-    title:'Сколько параметров можно передать функции ?',
+    title:'Сколько Моня может выпить колы ?',
     buttons: [
-        [{ text: 'Ровно столько, сколько указано в определении функции.', callback_data: '0_1' }],
-        [{ text: 'Сколько указано в определении функции или меньше.', callback_data: '0_2' }],
-        [{ text: 'Сколько указано в определении функции или больше.', callback_data: '0_3' }],
-        [{ text: 'Любое количество.', callback_data: '0_4' }]
+        [{ text: 'Ровно столько, сколько ты можешь прятаться от комбата.' }],
+        [{ text: 'Не больше, чем сказал ему врач.'}],
+        [{ text: 'Сколько влезает в бочку.'}],
+        [{ text: 'Бесконечно -_-.'}]
       ],
     right_answer: 4
   },
   {
-    title:'Чему равна переменная name?\nvar name = "пупкин".replace("п", "д")',
+    title:'Сколько раз за день Буря может показать что он пиздатый',
     buttons: [
-        [{ text: 'дудкин', callback_data: '1_1' }],
-        [{ text: 'дупкин', callback_data: '1_2' }],
-        [{ text: 'пупкин', callback_data: '1_3' }],
-        [{ text: 'ляпкин-тяпкин', callback_data: '1_4' }]
+        [{ text: '5' }],
+        [{ text: 'OVER9999'}],
+        [{ text: '16' }],
+        [{ text: '0' }]
       ],
     right_answer: 2
   },
   {
-    title:'Чему равно 0 || "" || 2 || true ?',
+    title:'Сколько лет Сяве',
     buttons: [
-        [{ text: '0', callback_data: '2_1' }],
-        [{ text: '""', callback_data: '2_2' }],
-        [{ text: '2', callback_data: '2_3' }],
-        [{ text: 'true', callback_data: '2_4' }]
+        [{ text: '15'}],
+        [{ text: '<50' }],
+        [{ text: '>50' }],
+        [{ text: '19' }]
       ],
     right_answer: 3
   },
@@ -97,7 +97,7 @@ bot.on('callback_query', function (msg) {
     bot.sendMessage(msg.from.id, 'Ответ неверный ❌');
   }
 
-  bot.answerCallbackQuery(msg.id, 'Вы выбрали: '+ msg.data, true);
+  
   newQuestion(msg);
 });
 
